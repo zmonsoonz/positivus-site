@@ -1,0 +1,18 @@
+//подключаем шрифты из файлов
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url(../assets/fonts/SpaceGrotesk-Regular.woff2);
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Space Grotesk";
+    src: url(../assets/fonts/SpaceGrotesk-Medium.woff2);
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+

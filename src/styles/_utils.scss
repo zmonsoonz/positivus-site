@@ -1,0 +1,30 @@
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding) * 2); //высчитывает полную ширину контейнера
+    margin-inline: auto;
+    padding-inline: var(--container-padding);
+}
+//класс для скрытия элементов
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+//не виден на мобильных устройствах
+.mobile-hidden {
+    @include mobile {
+        display: none !important;
+    }
+}
+//не виден на устройствах больше мобильных
+.mobile-visible {
+    @include mobile-above {
+        display: none !important;
+    }
+}

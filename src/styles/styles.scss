@@ -1,0 +1,76 @@
+@import "fonts",
+        "normalize",
+        "globals",
+        "media",
+        "mixins",
+        "utils",
+        "variables";
+
+.button {
+    border-radius: var(--border-button-radius);
+    padding: 20px 35px;
+    background-color: var(--color-dark);
+    color: white;
+    height: var(--button-height);
+    transition-duration: var(--transition-duration);
+
+    &:hover {
+        background-color: var(--color-green);
+        color: var(--color-dark);
+    }
+
+}
+
+.header {
+    padding-top: 60px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-image {
+        height: 36px;
+        width: 219px;
+    } 
+    
+    &__menu {
+        font-size: 20px;
+        margin-left: auto;
+        display: flex;
+        column-gap: 40px;
+        align-items: center;
+        &-link {
+            position: relative;
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                translate: -50%;
+                width: 0;
+                height: 2px;
+                background-color: currentColor;
+                transition-duration: inherit;
+            }
+        }
+        &-list {
+            display: flex;
+            column-gap: 40px;
+        }
+
+        &-button {
+            background-color: transparent;
+            color: black;
+        }
+    }
+
+}
