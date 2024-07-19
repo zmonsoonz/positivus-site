@@ -8,12 +8,13 @@
 
 .button {
     border-radius: var(--border-button-radius);
+    border: var(--border);
     padding: 20px 35px;
     background-color: var(--color-dark);
     color: white;
     height: var(--button-height);
     transition-duration: var(--transition-duration);
-
+    font-size: 20px;
     &:hover {
         background-color: var(--color-green);
         color: var(--color-dark);
@@ -70,7 +71,53 @@
         &-button {
             background-color: transparent;
             color: black;
+            border: 1px solid var(--color-dark);
         }
     }
 
+}
+
+.section {
+    padding-block: 70px;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap:35px;
+        width: 531px;
+    }
+
+    &__description {
+        width: 498px;
+        line-height: 140%;
+    }
+
+    &__button {
+        width: 264px;
+    }
+
+    &__partners {
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-item {
+            filter: saturate(0%);
+        }
+        
+    }
+    
 }
