@@ -1,0 +1,52 @@
+.header {
+
+    padding-top: 60px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    &__menu {
+        font-size: 20px;
+        display: flex;
+        column-gap: var(--main-gap);
+        align-items: center;
+
+        &-link {
+            position: relative;
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                translate: -50%;
+                width: 0;
+                height: 2px;
+                background-color: currentColor;
+                transition-duration: inherit;
+            }
+        }
+
+        &-list {
+            display: flex;
+            column-gap: var(--main-gap);
+        }
+
+        &-button {
+            background-color: transparent;
+            color: var(--color-black);
+            border: var(--border);
+        }
+    }
+
+}

@@ -1,0 +1,41 @@
+.landing {
+
+    &__main {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 35px;
+        width: 531px;
+    }
+
+    &__description {
+        p {
+            font-size: 20px;
+            width: 498px;
+            line-height: 140%;
+        }
+    }
+
+    &__button {
+        width: 264px;
+    }
+
+    &__partners {
+        margin-top: 70px;
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-item {
+            filter: saturate(0%);
+        }
+        
+    }
+    
+}

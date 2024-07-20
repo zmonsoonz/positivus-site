@@ -1,0 +1,29 @@
+.text-bg {
+
+    &-green {
+        background-color: var(--color-green);
+        border-radius: var(--border-header-radius);
+        padding-inline: 7px;
+    }
+
+    &-white {
+        background-color: var(--color-white);
+        border-radius: var(--border-header-radius);
+        padding-inline: 7px;
+    }
+    
+}
+
+.item-bg {
+
+    &-grey {
+        background-color: var(--color-grey);
+    }
+    &-dark {
+        background-color: var(--color-dark);
+    }
+    &-green {
+        background-color: var(--color-green);
+    }
+    
+}

@@ -1,4 +1,5 @@
 @import "fonts",
+        "mixins",
         "normalize",
         "globals",
         "media",
@@ -6,118 +7,9 @@
         "utils",
         "variables";
 
-.button {
-    border-radius: var(--border-button-radius);
-    border: var(--border);
-    padding: 20px 35px;
-    background-color: var(--color-dark);
-    color: white;
-    height: var(--button-height);
-    transition-duration: var(--transition-duration);
-    font-size: 20px;
-    &:hover {
-        background-color: var(--color-green);
-        color: var(--color-dark);
-    }
-
-}
-
-.header {
-    padding-top: 60px;
-    &__inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    &__logo-image {
-        height: 36px;
-        width: 219px;
-    } 
-    
-    &__menu {
-        font-size: 20px;
-        margin-left: auto;
-        display: flex;
-        column-gap: 40px;
-        align-items: center;
-        &-link {
-            position: relative;
-            transition-duration: var(--transition-duration);
-
-            @include hover {
-                &::after {
-                    width: 100%;
-                }
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                top: 100%;
-                left: 50%;
-                translate: -50%;
-                width: 0;
-                height: 2px;
-                background-color: currentColor;
-                transition-duration: inherit;
-            }
-        }
-        &-list {
-            display: flex;
-            column-gap: 40px;
-        }
-
-        &-button {
-            background-color: transparent;
-            color: black;
-            border: 1px solid var(--color-dark);
-        }
-    }
-
-}
-
-.section {
-    padding-block: 70px;
-}
-
-.landing {
-    display: flex;
-    flex-direction: column;
-    row-gap: 70px;
-
-    &__main {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    &__body {
-        display: flex;
-        flex-direction: column;
-        row-gap:35px;
-        width: 531px;
-    }
-
-    &__description {
-        width: 498px;
-        line-height: 140%;
-    }
-
-    &__button {
-        width: 264px;
-    }
-
-    &__partners {
-
-        &-list {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        &-item {
-            filter: saturate(0%);
-        }
-        
-    }
-    
-}
+@import "blocks/button",
+        "blocks/header",
+        "blocks/section",
+        "blocks/bg",
+        "blocks/landing",
+        "blocks/services";

@@ -1,0 +1,17 @@
+.section {
+
+    padding-block: var(--section-padding);
+    
+    &__header {
+        display: flex;
+        gap: var(--main-gap);
+    }
+
+    &__body {
+        margin-top: 80px;
+    }
+
+    &__description {
+        max-width: 580px;
+    }
+}
