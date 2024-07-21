@@ -1,0 +1,85 @@
+.process {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        counter-reset: custom-counter;
+        list-style: none;
+    }
+
+    &__item {
+        counter-increment: custom-counter;
+    }
+
+    &__accordion {
+        --stickRotate: 90deg;
+
+        background-color: var(--color-grey);
+        border: var(--border);
+        border-radius: var(--border-block-radius);
+        box-shadow: var(--shadow);
+        padding: 40px 60px;
+        transition-duration: var(--transition-duration);
+
+        @include hover {
+            background-color: var(--color-green);
+        }
+
+        &[open] {
+            background-color: var(--color-green);
+            transition-duration: var(--transition-duration);
+            --stickRotate: 0deg;
+        }
+
+        &-header {
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        &-title {
+            display: flex;
+            align-items: center;
+            column-gap: 25px;
+
+            &::before {
+                content: '0' counter(custom-counter);
+                font-size: 2em;
+            }
+        }
+
+        &-icon {
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background-color: var(--color-white);
+            border: 1px solid var(--color-dark);
+            position: relative;
+
+            &::before,
+            &::after {
+                @include abs-center;
+
+                content: '';
+                width: 26px;
+                height: 7px;
+                background-color: var(--color-dark);
+            }
+
+            &::after {
+                rotate: var(--stickRotate);
+                transition-duration: var(--transition-duration);
+            }
+        }
+
+        &-body {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid var(--color-dark);
+            height: 90px;
+        }
+    }
+}

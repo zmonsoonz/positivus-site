@@ -36,6 +36,12 @@
         font-size: 20px;
         display: flex;
         column-gap: 15px;
+        transition-duration: var(--transition-duration);
+
+        &:hover {
+            opacity: 0.7;
+        }
+        
     }
 
 }
