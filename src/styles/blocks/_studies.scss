@@ -1,0 +1,41 @@
+.studies {
+    border-radius: var(--border-block-radius);
+    background-color: var(--color-dark);
+    padding: 70px 60px;
+    height: 326px;
+
+    &__list {
+        display: flex;
+    }
+    
+    &__item {
+
+        --paddingItem: 64px;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+        &:not(:first-child) {
+            padding-left: var(--paddingItem);
+        }
+
+        &:not(:last-child) {
+            padding-right: var(--paddingItem);
+            border-right: 1px solid var(--color-white)
+        }
+    }
+
+    &__description {
+        width: 286px;
+        color: var(--color-white);
+    }
+    
+    &__link {
+        color: var(--color-green);
+        font-size: 20px;
+        display: flex;
+        column-gap: 15px;
+    }
+
+}
