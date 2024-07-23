@@ -1,0 +1,109 @@
+.footer {
+    padding-top: var(--section-padding);
+
+    &__body {
+        border-radius: var(--border-block-radius) var(--border-block-radius) 0 0;
+        padding: 55px 60px 50px 60px;
+        background-color: var(--color-dark);
+        color: var(--color-white);
+    }
+
+    &__header {
+        display: flex;
+        column-gap: 155px;
+        align-items: center;
+    }
+
+    &__menu {
+
+        &-list {
+            display: flex;
+            column-gap: 40px;
+        }
+
+        &-link {
+            position: relative;
+            transition-duration: var(--transition-duration);
+
+            @include hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                translate: -50%;
+                width: 0;
+                height: 2px;
+                background-color: currentColor;
+                transition-duration: inherit;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &__main {
+        display: flex;
+        padding-top: 66px;
+        column-gap: 154px;
+        align-items: center;
+        padding-bottom: 50px;
+        border-bottom: 1px solid var(--color-white);
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        &-title {
+            color: var(--color-black);
+            width: 128px;
+        }
+        &-address {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+        }
+    }
+
+    &__form {
+        padding: 58px 40px;
+        border-radius: var(--border-button-radius);
+        background-color: #292a32;
+        display: flex;
+        column-gap: 20px;
+
+        &-input {
+            border: 1px solid var(--color-white);
+            border-radius: var(--border-button-radius);
+            padding: 22px 35px;
+            width: 285px;
+            background-color: transparent;
+            color: var(--color-white);
+            &::placeholder {
+                color: var(--color-white);
+            }
+        }
+
+        &-button {
+            background-color: var(--color-green);
+            color: var(--color-black);
+        }
+    }
+
+    &__extra {
+        padding-top: 50px;
+        display: flex;
+        column-gap: 40px;
+    }
+    
+}
