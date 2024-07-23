@@ -712,6 +712,52 @@
                 </div>
             </div>
         </section>
+        <section class="section container">
+            <header class="section__header">
+                <h2 class="section__title text-bg-green">
+                    Contact Us
+                </h2>
+                <div class="section__description">
+                    <p>Connect with Us: Let's Discuss Your<br>Digital Marketing Needs</p>
+                </div>
+            </header>
+            <div class="section__body">
+                <div class="contact">
+                    <form class="contact-form">
+                        <fieldset class="contact-form__radios">
+                            <label class="radios__item radio">
+                                <input class="radio__input visually-hidden" type="radio" name="request" value="sayHi" checked/>
+                                <span class="radio__emulator radio-active"></span>
+                                <span class="radio__title">Say Hi</span>
+                            </label>
+                            <label class="radios__item radio">
+                                <input class="radio__input visually-hidden" type="radio" name="request" value="Get a Quote"/>
+                                <span class="radio__emulator"></span>
+                                <span class="radio__title">Get a Quote</span>
+                            </label>
+                        </fieldset>
+                        <div class="contact-form__body">
+                            <div class="contact-form__field">
+                                <label class="field__label" for="name">Name</label>
+                                <input class="field__input" id="name" name="name" placeholder="Name"/>
+                            </div>
+                            <div class="contact-form__field">
+                                <label class="field__label" for="email">Email*</label>
+                                <input class="field__input" type="email" id="email" name="email" placeholder="Email" required/>
+                            </div>
+                            <div class="contact-form__field">
+                                <label class="field__label" for="message">Message*</label>
+                                <textarea class="field__input textarea" id="message" name="message" placeholder="Message" required></textarea>
+                            </div>
+                        </div>
+                        <button class="button contact-form__button" type="submit">
+                            Send Message
+                        </button>
+                    </form>
+                    <img src="./assets/images/contact/image.svg" alt="" class="contact__image">
+                </div>
+            </div>
+        </section>
     </main>
 </body>
 </html>

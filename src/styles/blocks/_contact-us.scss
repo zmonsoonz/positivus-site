@@ -1,0 +1,86 @@
+.contact {
+    background-color: var(--color-grey);
+    padding: 60px 0px 80px 100px;
+    border-radius: var(--border-block-radius);
+    height: 773px;
+    display: flex;
+    column-gap: 230px;
+    
+    &-form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        &__body,
+        &__field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__body {
+            row-gap: 25px;
+        }
+
+        &__field {
+            row-gap: 5px;
+        }
+
+        &__radios {
+            display: flex;
+            align-items: center;
+            column-gap: 35px;
+        }
+    }
+}
+
+.field {
+    &__label {
+        font-size: 16px;
+        line-height: 175%;
+    }
+    &__input {
+        width: 556px;
+        padding: 18px 30px;
+        border-radius: var(--border-button-radius);
+        border: var(--border);
+        color: var(--color-grey-alt);
+    }
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    column-gap: 14px;
+
+    &__input {
+        &:not(:checked) + .radio__emulator::after {
+            opacity: 0;
+        }
+    }
+
+    &__emulator {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: var(--color-white);
+        border: var(--border);
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            position: absolute;
+            transition-duration: var(--transiotion-duration);
+            width: 16px;
+            height: 16px;
+            background-color: var(--color-green);
+            border-radius: 50%;
+            @include abs-center;
+        }
+    }
+}
+
+.textarea {
+    height: 190px;
+    resize: none;
+}
