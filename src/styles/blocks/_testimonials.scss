@@ -1,0 +1,102 @@
+.testimonials {
+    height: 625px;
+    background-color: var(--color-dark);
+    border-radius: var(--border-block-radius);
+    padding-top: 84px;
+    padding-bottom: 58px;
+    row-gap: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+
+    &__slider {
+        display: flex;
+        column-gap: 50px;
+        overflow: hidden;
+    }
+
+    &-card {
+        color: var(--color-white);
+        min-width: 606px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 45px;
+
+        &__body {
+            border: 1px solid var(--color-green);
+            padding: 48px 52px 52px;
+            border-radius: var(--border-block-radius);
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 40px;
+                height: 40px;
+                border: 1px solid var(--color-green);
+                background-color: var(--color-dark);
+                position: absolute;
+                top: 100%;
+                left: 60px;
+                clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+                rotate: 45deg;
+                translate: 0 -50%;
+            }
+        }
+
+        &__footer {
+            margin-left: 80px;
+        }
+
+        &__name {
+            color: var(--color-green);
+        }
+    }
+    &-pagination {
+        display: flex;
+        column-gap: 190px;
+        align-items: center;
+
+        &__arrow-button {
+            @include reset-button;
+            cursor: pointer;
+            color: var(--color-white);
+
+            @include hover {
+                &:hover {
+                    color: var(--color-green);
+                }
+            }
+
+            &[disabled] {
+                color: var(--color-grey-alt);
+                cursor: auto;
+                pointer-events: none;
+            }
+
+        }
+
+        &__button {
+            @include reset-button;
+            cursor: pointer;
+            color: var(--color-white);
+            @include hover {
+                &:hover {
+                    color: var(--color-green);
+                }
+            }
+        }
+
+        &__list {
+            display: flex;
+            column-gap: 20px;
+            align-items: center;
+        }
+    }
+}
+
+.is-active {
+    svg {
+        color: var(--color-green);
+    }
+}
