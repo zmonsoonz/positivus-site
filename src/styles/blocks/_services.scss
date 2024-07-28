@@ -5,6 +5,10 @@
         flex-direction: row;
         flex-wrap: wrap;
         gap: var(--main-gap);
+
+        @include desktop {
+            justify-content: center;
+        }
     }
 
     &__item {
@@ -18,14 +22,32 @@
         display: flex;
         justify-content: space-between;
         overflow: hidden;
+
+        @include desktop {
+            width: 470px;
+        }
+        @include tablet {
+            width: 100%;
+        }
+        @include mobile-s {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
         &__body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            @include mobile-s {
+                display: contents;
+            }
         }
 
         &__image {
             align-self: center;
+            @include desktop {
+                width: 170px;
+                height: auto;
+            }
         }
 
         &__link {
@@ -36,6 +58,21 @@
             font-size: 20px;
             &:hover {
                 scale: 1.05;
+            }
+
+            &-text {
+                @include mobile-s {
+                    @include visually-hidden;
+                }
+            }
+            @include mobile-s {
+                align-self: end;
+            }
+        }
+
+        &__title {
+            @include mobile-s {
+                grid-column: 1 / 3;
             }
         }
     }

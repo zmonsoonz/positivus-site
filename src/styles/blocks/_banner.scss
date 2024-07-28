@@ -4,6 +4,9 @@
     margin-top: 100px;
     padding-block: var(--bannerImageOffset);
     overflow: hidden;
+    @include tablet {
+        margin-top: 70px;
+    }
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -17,6 +20,11 @@
         flex-direction: column;
         row-gap: 26px;
         padding: 60px;
+        @include mobile {
+            row-gap: 20px;
+            padding: 40px;
+            justify-content: center;
+        }
     }
 
     &__description {
@@ -30,5 +38,13 @@
     &__image {
         margin-block: calc(var(--bannerImageOffset) * -1);
         align-self: center;
+        @include tablet {
+            margin-right: -80px;
+            width: 350px;
+            height: auto;
+        }
+        @include mobile {
+            @include visually-hidden;
+        }
     }
 }
