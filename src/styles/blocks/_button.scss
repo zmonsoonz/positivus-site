@@ -2,16 +2,18 @@
 
     border-radius: var(--border-button-radius);
     border: none;
-    padding: var(--button-padding);
+    @include flex-center;
     background-color: var(--color-dark);
     color: var(--color-white);
     height: var(--button-height);
     transition-duration: var(--transition-duration);
     font-size: 20px;
-
-    &:hover {
-        background-color: var(--color-green);
-        color: var(--color-dark);
+    cursor: pointer;
+    @include hover {
+        &:hover {
+            background-color: var(--color-green);
+            color: var(--color-dark);
+        }
     }
 
 }

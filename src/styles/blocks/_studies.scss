@@ -3,7 +3,7 @@
     background-color: var(--color-dark);
     padding: 70px 60px;
     height: 326px;
-
+    overflow: hidden;
     &__list {
         display: flex;
     }

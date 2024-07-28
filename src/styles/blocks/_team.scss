@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--main-gap);
-
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -58,5 +57,6 @@
 
     &__button {
         align-self: end;
+        width: 269px;
     }
 }
