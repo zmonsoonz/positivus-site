@@ -2,15 +2,23 @@
     background-color: var(--color-grey);
     padding: 60px 0px 80px 100px;
     border-radius: var(--border-block-radius);
-    height: 773px;
     display: flex;
     column-gap: 230px;
     overflow-x: hidden;
+    @include tablet {
+        column-gap: 0px;
+    }
+    @include mobile {
+        padding: 30px;
+    }
     &-form {
         display: flex;
         flex-direction: column;
         row-gap: 40px;
-
+        @include mobile {
+            width: 100%;
+            align-items: center;
+        }
         &__body,
         &__field {
             display: flex;
@@ -29,6 +37,19 @@
             display: flex;
             align-items: center;
             column-gap: 35px;
+            @include mobile {
+                column-gap: 60px;
+            }
+        }
+        &__mobile-button {
+            width: 390px;
+            margin: 30px auto 0px
+        }
+    }
+
+    &__image {
+        @include mobile {
+            @include visually-hidden;
         }
     }
 }
@@ -44,6 +65,9 @@
         border-radius: var(--border-button-radius);
         border: var(--border);
         color: var(--color-grey-alt);
+        @include mobile {
+            width: 330px;
+        }
     }
 }
 
@@ -51,7 +75,6 @@
     display: flex;
     align-items: center;
     column-gap: 14px;
-
     &__input {
         &:not(:checked) + .radio__emulator::after {
             opacity: 0;
@@ -83,4 +106,7 @@
 .textarea {
     height: 190px;
     resize: none;
+    @include mobile {
+        height: 132px;
+    }
 }
