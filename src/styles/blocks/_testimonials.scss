@@ -1,5 +1,4 @@
 .testimonials {
-    height: 625px;
     background-color: var(--color-dark);
     border-radius: var(--border-block-radius);
     padding-top: 84px;
@@ -9,26 +8,37 @@
     flex-direction: column;
     align-items: center;
     overflow-x: hidden;
+    @include mobile {
+        row-gap: 60px;
+        padding: 30px 30px 50px 30px;
+    }
 
     &__slider {
         display: flex;
-        column-gap: 50px;
+        column-gap: 30px;
         overflow: hidden;
     }
 
     &-card {
         color: var(--color-white);
-        min-width: 606px;
+        width: 606px;
         display: flex;
         flex-direction: column;
         row-gap: 45px;
-
+        overflow-x: hidden;
+        @include mobile {
+            width: 326px;
+        }
         &__body {
             border: 1px solid var(--color-green);
             padding: 48px 52px 52px;
             border-radius: var(--border-block-radius);
             position: relative;
-
+            @include mobile {
+                padding: 30px;
+                height: 302px;
+                width: 326px;
+            }
             &::after {
                 content: '';
                 width: 40px;
@@ -40,7 +50,7 @@
                 left: 60px;
                 clip-path: polygon(100% 0, 0% 100%, 100% 100%);
                 rotate: 45deg;
-                translate: 0 -50%;
+                translate: 0 -52%;
             }
         }
 
@@ -56,7 +66,9 @@
         display: flex;
         column-gap: 190px;
         align-items: center;
-
+        @include mobile {
+            column-gap: 72px;
+        }
         &__arrow-button {
             @include reset-button;
             cursor: pointer;
