@@ -6,6 +6,10 @@
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
+        justify-content: center;
+        @include mobile {
+            gap: 30px;
+        }
     }
 
     &__item {
@@ -58,5 +62,9 @@
     &__button {
         align-self: end;
         width: 269px;
+        @include mobile {
+            width: 390px;
+            align-self: center;
+        }
     }
 }
