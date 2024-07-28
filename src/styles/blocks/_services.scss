@@ -17,7 +17,7 @@
         box-shadow: var(--shadow);
         display: flex;
         justify-content: space-between;
-
+        overflow: hidden;
         &__body {
             display: flex;
             flex-direction: column;

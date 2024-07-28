@@ -1,7 +1,9 @@
 .section {
 
     padding-block: var(--section-padding);
-    
+    @include tablet {
+        padding-block: 40px;
+    }
     &__header {
         display: flex;
         gap: var(--main-gap);

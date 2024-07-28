@@ -3,25 +3,51 @@
     &__main {
         display: flex;
         justify-content: space-between;
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+        }
     }
 
     &__body {
         display: flex;
         flex-direction: column;
         row-gap: 35px;
-        width: 531px;
+        max-width: 531px;
+
+        @include desktop {
+            max-width: 450px;
+        }
+
+        // @include tablet {
+        //     max-width: 350px;
+        // }
+        @include tablet {
+            display: contents;
+        }
+
+    }
+
+    &__title {
+        @include tablet {
+            order: -2;
+        }
     }
 
     &__description {
         p {
-            font-size: 20px;
-            width: 498px;
+            max-width: 498px;
             line-height: 140%;
+            @include fluid-text(20, 16);
         }
     }
 
     &__button {
         width: 264px;
+        @include tablet {
+            width: 390px;
+        }
     }
 
     &__partners {
@@ -30,12 +56,37 @@
         &-list {
             display: flex;
             justify-content: space-between;
+            @include tablet {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                row-gap: 20px;
+                overflow-x: hidden;
+                margin-inline: -20px;
+            }
         }
 
         &-item {
             filter: saturate(0%);
+            display: flex;
+            justify-content: center;
         }
+
+
         
+    }
+
+    &__image {
+        @include desktop {
+            width: 510px;
+            height: auto;
+        }
+        @include tablet {
+            order: -1;
+        }
+        @include mobile {
+            width: 360px;
+            height: auto;
+        }
     }
     
 }
