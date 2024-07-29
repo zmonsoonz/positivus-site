@@ -17,10 +17,9 @@
         display: flex;
         column-gap: 50px;
         transition: 1s;
-        overflow-x: scroll;
-        transform: translateX(656px*2);
+        overflow-x: hidden;
         @include mobile {
-            transform: translateX(376px*2);
+            transform: translate(0px);
         }
     }
 
