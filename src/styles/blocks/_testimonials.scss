@@ -15,8 +15,13 @@
 
     &__slider {
         display: flex;
-        column-gap: 30px;
-        overflow: hidden;
+        column-gap: 50px;
+        transition: 1s;
+        overflow-x: scroll;
+        transform: translateX(656px*2);
+        @include mobile {
+            transform: translateX(376px*2);
+        }
     }
 
     &-card {
@@ -25,7 +30,6 @@
         display: flex;
         flex-direction: column;
         row-gap: 45px;
-        overflow-x: hidden;
         @include mobile {
             width: 326px;
         }
