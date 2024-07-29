@@ -5,20 +5,25 @@
     display: flex;
     column-gap: 230px;
     overflow-x: hidden;
+
     @include tablet {
         column-gap: 0px;
     }
+
     @include mobile {
         padding: 30px;
     }
+
     &-form {
         display: flex;
         flex-direction: column;
         row-gap: 40px;
+
         @include mobile {
             width: 100%;
             align-items: center;
         }
+
         &__body,
         &__field {
             display: flex;
@@ -37,13 +42,15 @@
             display: flex;
             align-items: center;
             column-gap: 35px;
+
             @include mobile {
                 column-gap: 60px;
             }
         }
+
         &__mobile-button {
             width: 390px;
-            margin: 30px auto 0px
+            margin: 30px auto 0px;
         }
     }
 
@@ -59,12 +66,14 @@
         font-size: 16px;
         line-height: 175%;
     }
+
     &__input {
         width: 556px;
         padding: 18px 30px;
         border-radius: var(--border-button-radius);
         border: var(--border);
         color: var(--color-grey-alt);
+        
         @include mobile {
             width: 330px;
         }
@@ -75,6 +84,7 @@
     display: flex;
     align-items: center;
     column-gap: 14px;
+
     &__input {
         &:not(:checked) + .radio__emulator::after {
             opacity: 0;
@@ -82,8 +92,7 @@
     }
 
     &__emulator {
-        width: 30px;
-        height: 30px;
+        @include square(30px);
         border-radius: 50%;
         background-color: var(--color-white);
         border: var(--border);
@@ -92,12 +101,10 @@
 
         &::after {
             content: '';
-            position: absolute;
             transition-duration: var(--transiotion-duration);
-            width: 16px;
-            height: 16px;
+            @include square(16px);
             background-color: var(--color-green);
-            border-radius: 50%;
+            border-radius: inherit;
             @include abs-center;
         }
     }
@@ -106,6 +113,7 @@
 .textarea {
     height: 190px;
     resize: none;
+    
     @include mobile {
         height: 132px;
     }

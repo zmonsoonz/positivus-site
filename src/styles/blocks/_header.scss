@@ -1,17 +1,16 @@
 .header {
-
     padding-top: 60px;
+
     @include tablet {
-        padding-top: 40px;
-    }
-    @include mobile {
         padding-top: 30px;
     }
+
     &__inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
+
     &__logo {
         svg {
             @include tablet {
@@ -19,18 +18,14 @@
             }
         }
     }
+
     &__menu {
-        font-size: 20px;
         display: flex;
         column-gap: var(--main-gap);
         align-items: center;
-
-        @include desktop {
-            font-size: 18px;
-        }
+        @include fluid-text(20, 16);
 
         @include tablet {
-            font-size: 16px;
             column-gap: 20px;
         }
 
@@ -60,6 +55,7 @@
         &-list {
             display: flex;
             column-gap: var(--main-gap);
+            
             @include desktop {
                 column-gap: 20px;
             }
@@ -70,6 +66,7 @@
             color: var(--color-black);
             border: var(--border);
             width: 231px;
+            
             @include desktop {
                 height: 60px;
                 width: 200px;
@@ -88,9 +85,7 @@
 
 .burger-button {
     @include reset-button;
-    width: 40px;
-    height: 40px;
-
+    @include square(40px);
     position: relative;
 
     &::after {
@@ -101,7 +96,6 @@
         height: 2px;
         background-color: var(--color-dark);
         border-radius: 5px;
-
         box-shadow: 0px -8px, 0px 8px;
     }
 }

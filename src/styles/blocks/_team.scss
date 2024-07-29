@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--main-gap);
+
     &__list {
         display: flex;
         flex-wrap: wrap;
         gap: 40px;
         justify-content: center;
+
         @include mobile {
             gap: 30px;
         }
@@ -42,9 +44,12 @@
             display: flex;
             justify-content: end;
             align-items: start;
-
-            &:hover {
-                opacity: 0.7;
+            cursor:default;
+            &-image {
+                cursor:pointer;
+                @include hover {
+                    opacity: 0.7;
+                }
             }
         }
 
@@ -52,16 +57,12 @@
             padding-top: 28px;
             border-top: 1px solid var(--color-black);
         }
-
-        &__image {
-            width: 100px;
-            height: 100px;
-        }
     }
 
     &__button {
         align-self: end;
         width: 269px;
+        
         @include mobile {
             width: 390px;
             align-self: center;

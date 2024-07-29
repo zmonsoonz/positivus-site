@@ -1,11 +1,8 @@
 .section {
-
     padding-block: var(--section-padding);
+
     @include tablet {
         padding-block: 60px;
-    }
-    @include mobile {
-        padding-block: 40px;
     }
 
     &__header {
@@ -21,6 +18,7 @@
 
     &__body {
         margin-top: 80px;
+
         @include mobile {
             margin-top: 40px;
         }
@@ -28,6 +26,7 @@
 
     &__description {
         max-width: 580px;
+        
         @include mobile {
             min-width: 100%;
             text-align: center;

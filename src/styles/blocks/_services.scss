@@ -1,5 +1,4 @@
 .services {
-
     &__list {
         display: flex;
         flex-direction: row;
@@ -14,29 +13,31 @@
     &__item {
 
         width: 600px;
-        height: 310px;
         border: var(--border);
         border-radius: var(--border-block-radius);
         padding: 50px;
         box-shadow: var(--shadow);
         display: flex;
         justify-content: space-between;
-        overflow: hidden;
 
         @include desktop {
             width: 470px;
         }
+
         @include tablet {
             width: 100%;
         }
+
         @include mobile-s {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
+
         &__body {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
             @include mobile-s {
                 display: contents;
             }
@@ -44,6 +45,7 @@
 
         &__image {
             align-self: center;
+
             @include desktop {
                 width: 170px;
                 height: auto;
@@ -56,7 +58,8 @@
             align-items: center;
             transition-duration: var(--transition-duration);
             font-size: 20px;
-            &:hover {
+
+            @include hover {
                 scale: 1.05;
             }
 
@@ -65,6 +68,7 @@
                     @include visually-hidden;
                 }
             }
+            
             @include mobile-s {
                 align-self: end;
             }

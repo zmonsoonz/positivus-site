@@ -1,5 +1,4 @@
 .button {
-
     border-radius: var(--border-button-radius);
     border: none;
     @include flex-center;
@@ -9,11 +8,9 @@
     transition-duration: var(--transition-duration);
     font-size: 20px;
     cursor: pointer;
-    @include hover {
-        &:hover {
-            background-color: var(--color-green);
-            color: var(--color-dark);
-        }
-    }
 
+    @include hover {
+        background-color: var(--color-green);
+        color: var(--color-dark);
+    }
 }

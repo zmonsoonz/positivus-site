@@ -1,5 +1,4 @@
 .process {
-
     &__list {
         display: flex;
         flex-direction: column;
@@ -21,9 +20,11 @@
         box-shadow: var(--shadow);
         padding: 40px 60px;
         transition-duration: var(--transition-duration);
+
         @include mobile {
             padding: 30px;
         }
+
         @include hover {
             background-color: var(--color-green);
         }
@@ -40,23 +41,23 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // @include mobile {
-            //     max-width: 360px;
-            // }
         }
         
         &-title {
             display: flex;
             align-items: center;
             column-gap: 25px;
+
             @include mobile {
                 font-size: 18px;
             }
+
             &::before {
                 content: '0' counter(custom-counter);
                 font-size: 2em;
             }
         }
+
         &-body {
             @include mobile {
                 font-size: 12px;
@@ -64,21 +65,20 @@
         }
 
         &-icon {
-            width: 58px;
-            height: 58px;
+            @include square(58px);
             border-radius: 50%;
             background-color: var(--color-white);
             border: 1px solid var(--color-dark);
             position: relative;
             flex-shrink: 0;
+
             @include mobile {
-                width: 30px;
-                height: 30px;
+                @include square(30px);
             }
+
             &::before,
             &::after {
                 @include abs-center;
-
                 content: '';
                 width: 45%;
                 height: 12%;
@@ -95,7 +95,11 @@
             margin-top: 30px;
             padding-top: 30px;
             border-top: 1px solid var(--color-dark);
-            height: 90px;
+            
+            @include mobile {
+                margin-top: 20px;
+                padding-top: 20px;
+            }
         }
     }
 }

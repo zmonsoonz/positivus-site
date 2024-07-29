@@ -1,8 +1,8 @@
 .landing {
-
     &__main {
         display: flex;
         justify-content: space-between;
+
         @include tablet {
             flex-direction: column;
             align-items: center;
@@ -20,13 +20,9 @@
             max-width: 450px;
         }
 
-        // @include tablet {
-        //     max-width: 350px;
-        // }
         @include tablet {
             display: contents;
         }
-
     }
 
     &__title {
@@ -45,6 +41,7 @@
 
     &__button {
         width: 264px;
+
         @include tablet {
             width: 390px;
         }
@@ -69,10 +66,7 @@
             filter: saturate(0%);
             display: flex;
             justify-content: center;
-        }
-
-
-        
+        }    
     }
 
     &__image {
@@ -80,9 +74,11 @@
             width: 510px;
             height: auto;
         }
+
         @include tablet {
             order: -1;
         }
+
         @include mobile {
             width: 360px;
             height: auto;

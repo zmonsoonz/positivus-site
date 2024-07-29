@@ -4,15 +4,20 @@
     margin-top: 100px;
     padding-block: var(--bannerImageOffset);
     overflow: hidden;
+
     @include tablet {
         margin-top: 70px;
     }
+
     &__inner {
         display: flex;
         justify-content: space-between;
         border-radius: var(--border-block-radius);
-        height: 347px;
         background-color: var(--color-grey);
+
+        @include tablet {
+            height: 370px;
+        }
     }
 
     &__body {
@@ -20,6 +25,7 @@
         flex-direction: column;
         row-gap: 26px;
         padding: 60px;
+
         @include mobile {
             row-gap: 20px;
             padding: 40px;
@@ -34,17 +40,19 @@
     }
 
     &__button {
-        width: 288px;
+        width: 290px;
     }
 
     &__image {
         margin-block: calc(var(--bannerImageOffset) * -1);
         align-self: center;
+
         @include tablet {
             margin-right: -80px;
-            width: 350px;
+            width: 360px;
             height: auto;
         }
+        
         @include mobile {
             @include visually-hidden;
         }
