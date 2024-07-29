@@ -72,7 +72,7 @@
         padding: 18px 30px;
         border-radius: var(--border-button-radius);
         border: var(--border);
-        color: var(--color-grey-alt);
+        // color: var(--color-grey-alt);
         
         @include mobile {
             width: 330px;
@@ -113,7 +113,7 @@
 .textarea {
     height: 190px;
     resize: none;
-    
+
     @include mobile {
         height: 132px;
     }

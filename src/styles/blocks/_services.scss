@@ -13,6 +13,7 @@
     &__item {
 
         width: 600px;
+        height: 310px;
         border: var(--border);
         border-radius: var(--border-block-radius);
         padding: 50px;
@@ -68,7 +69,7 @@
                     @include visually-hidden;
                 }
             }
-            
+
             @include mobile-s {
                 align-self: end;
             }
