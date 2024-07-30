@@ -31,6 +31,9 @@
         @include mobile {
             width: 330px;
         }
+        @include mobile-s {
+            width: 310px;
+        }
 
         &__body {
             border: 1px solid var(--color-green);
@@ -74,6 +77,10 @@
             column-gap: 72px;
         }
 
+        @include mobile-s {
+            column-gap: 36px;
+        }
+
         &__arrow-button {
             @include reset-button;
             cursor: pointer;
@@ -112,5 +119,11 @@
 .is-active {
     svg {
         color: var(--color-green);
+    }
+}
+
+details {
+    summary::-webkit-details-marker {
+        display:none;
     }
 }

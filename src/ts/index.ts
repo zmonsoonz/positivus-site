@@ -11,12 +11,12 @@ const sliderNext = document.getElementById("next-arrow") as HTMLButtonElement,
 
 let currentIndex: number = 0;
 
-window.addEventListener('resize', () => {
-    currentIndex = 0;
-    moveSlider(0);
-    sliderPrev.disabled = false;
-    sliderNext.disabled = false;
-});
+// window.addEventListener('resize', () => {
+//     currentIndex = 0;
+//     moveSlider(0);
+//     sliderPrev.disabled = false;
+//     sliderNext.disabled = false;
+// });
 
 sliderNext.addEventListener('click', () => {
     currentIndex += 1;
@@ -56,10 +56,24 @@ paginationButtons.forEach((item: HTMLButtonElement, i: number) => {
         if (currentIndex > 0) {
             let sliderTranslate = (card.offsetWidth + 50) * -currentIndex;
             moveSlider(sliderTranslate);
+            sliderPrev.disabled = false;
+            if (currentIndex == 2) {
+                sliderNext.disabled = true;
+            }
+            else {
+                sliderNext.disabled = false;
+            }
         }
         else {
             let sliderTranslate = -(card.offsetWidth + 50) * currentIndex;
             moveSlider(sliderTranslate);
+            sliderNext.disabled = false;
+            if (currentIndex == -2) {
+                sliderPrev.disabled = true;
+            }
+            else {
+                sliderPrev.disabled = false;
+            }
         }
     })
 })

@@ -7,10 +7,12 @@ $tablet-above: 1024px;
 $mobile: 767px;
 $mobile-above: 768px;
 
-$mobile-s: 510px;
-$mobile-s-above: 511px;
+$mobile-l: 510px;
+$mobile-l-above: 511px;
 
-//
+$mobile-s: 424px;
+$mobile-s-above: 425px;
+
 @mixin desktop-above {
     @media (min-width: $desktop-above) {
         @content;
@@ -40,6 +42,17 @@ $mobile-s-above: 511px;
 }
 @mixin mobile {
     @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin mobile-l-above {
+    @media (min-width: $mobile-l-above) {
+        @content;
+    }
+}
+@mixin mobile-l {
+    @media (max-width: $mobile-l) {
         @content;
     }
 }

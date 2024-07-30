@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "webpack --env mode=development",
     "build": "webpack --env mode=production",
-    "start": "webpack serve --env mode=development"
+    "start": "webpack serve --env mode=development",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",

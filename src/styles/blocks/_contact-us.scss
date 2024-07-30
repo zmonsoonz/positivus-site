@@ -12,8 +12,13 @@
 
     @include mobile {
         padding: 30px;
+        width: 100%;
     }
-
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     &-form {
         display: flex;
         flex-direction: column;
@@ -50,7 +55,10 @@
 
         &__mobile-button {
             width: 390px;
-            margin: 30px auto 0px;
+            margin-top: 30px;
+            @include mobile-s {
+                width: 340px;
+            }
         }
     }
 
@@ -72,10 +80,12 @@
         padding: 18px 30px;
         border-radius: var(--border-button-radius);
         border: var(--border);
-        // color: var(--color-grey-alt);
         
         @include mobile {
             width: 330px;
+        }
+        @include mobile-s {
+            width: 310px;
         }
     }
 }

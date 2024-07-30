@@ -45,11 +45,14 @@
         @include tablet {
             width: 390px;
         }
+        
+        @include mobile-s {
+            width: 340px;
+        }
     }
 
     &__partners {
         margin-top: 70px;
-
         &-list {
             display: flex;
             justify-content: space-between;
@@ -57,8 +60,10 @@
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 row-gap: 20px;
-                overflow-x: hidden;
                 margin-inline: -20px;
+            }
+            @include mobile-s {
+                @include visually-hidden;
             }
         }
 
@@ -66,6 +71,9 @@
             filter: saturate(0%);
             display: flex;
             justify-content: center;
+            @include mobile {
+                min-width: 140px;
+            }
         }    
     }
 

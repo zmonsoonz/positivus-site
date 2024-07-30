@@ -15,6 +15,12 @@
             gap: 30px;
         }
     }
+    
+    &__title {
+        @include mobile {
+            text-align: center;
+        }
+    }
 
     &__body {
         margin-top: 80px;

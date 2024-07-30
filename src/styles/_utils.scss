@@ -1,19 +1,23 @@
 .container {
-    max-width: calc(var(--container-width) + var(--container-padding) * 2); //высчитывает полную ширину контейнера
+    max-width: calc(var(--container-width) + var(--container-padding) * 2);
     margin-inline: auto;
     padding-inline: var(--container-padding);
+    // @include mobile-s {
+    //     max-width: 100%;
+    //     padding-inline: 0;
+    // }
 }
-//класс для скрытия элементов
+
 .visually-hidden {
     @include visually-hidden;
 }
-//не виден на мобильных устройствах
+
 .mobile-hidden {
     @include mobile {
         display: none !important;
     }
 }
-//не виден на устройствах больше мобильных
+
 .mobile-visible {
     @include mobile-above {
         display: none !important;

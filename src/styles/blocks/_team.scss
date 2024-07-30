@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--main-gap);
-
     &__list {
         display: flex;
         flex-wrap: wrap;
@@ -15,7 +14,7 @@
     }
 
     &__item {
-        width: 386px;
+        max-width: 386px;
         border: var(--border);
         border-radius: var(--border-block-radius);
         padding: 40px 35px;
@@ -66,6 +65,10 @@
         @include mobile {
             width: 390px;
             align-self: center;
+        }
+
+        @include mobile-s {
+            width: 340px;
         }
     }
 }

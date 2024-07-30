@@ -29,7 +29,7 @@
             width: 100%;
         }
 
-        @include mobile-s {
+        @include mobile-l {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
@@ -39,7 +39,7 @@
             flex-direction: column;
             justify-content: space-between;
 
-            @include mobile-s {
+            @include mobile-l {
                 display: contents;
             }
         }
@@ -65,18 +65,18 @@
             }
 
             &-text {
-                @include mobile-s {
+                @include mobile-l {
                     @include visually-hidden;
                 }
             }
 
-            @include mobile-s {
+            @include mobile-l {
                 align-self: end;
             }
         }
 
         &__title {
-            @include mobile-s {
+            @include mobile-l {
                 grid-column: 1 / 3;
             }
         }

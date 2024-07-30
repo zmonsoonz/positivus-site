@@ -1,6 +1,5 @@
 .footer {
     padding-top: var(--section-padding);
-
     &__body {
         border-radius: var(--border-block-radius) var(--border-block-radius) 0 0;
         padding: 55px 60px 50px 60px;
@@ -161,6 +160,10 @@
             width: 390px;
             padding: 30px;
             row-gap: 20px;
+        }
+
+        @include mobile-s {
+            width: 340px;
         }
 
         &-input {
