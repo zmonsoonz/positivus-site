@@ -3,7 +3,7 @@
     width: 100%;
     margin: 0;
     border: none;
-    padding: 50px 25px;
+    padding: 40px 30px;
 
     &:modal {
         max-width: 100%;
@@ -25,21 +25,9 @@
 
     &__close-button {
         @include reset-button;
-        width: 30px;
-        height: 2px;
-        background-color: var(--color-dark);
-        transform: rotate(45deg);
-        position: relative;
-        border-radius: 5px;
-
-        &:after {
-            content: '';
-            @include abs-center;
-            width: inherit;
-            height: inherit;
-            background-color: var(--color-dark);
-            transform: rotate(-90deg);
-            border-radius: 5px;
+        @include square(20px);
+        &:focus {
+            outline: none !important;
         }
     }
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
+  "homepage": "./",
   "scripts": {
     "dev": "webpack --env mode=development",
     "build": "webpack --env mode=production",

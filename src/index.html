@@ -66,6 +66,7 @@
             <dialog class="burger-menu mobile-visible" id="mobileMenu">
                 <form method="dialog" class="burger-menu__form-close">
                     <button class="burger-menu__close-button" type="submit">
+                        <img src="./assets/images/header/close.png">
                     </button>
                 </form>
                 <div class="burger-menu__body">
@@ -778,7 +779,7 @@
             <div class="section__body">
                 <div class="contact__wrapper">
                     <div class="contact">
-                        <form class="contact-form">
+                        <form class="contact-form" id="contact">
                             <fieldset class="contact-form__radios">
                                 <label class="radios__item radio">
                                     <input class="radio__input visually-hidden" type="radio" name="request" value="sayHi" checked/>
@@ -811,7 +812,7 @@
                         </form>
                         <img src="./assets/images/contact/image.svg" alt="" class="contact__image">
                     </div>
-                    <button class="button contact-form__mobile-button mobile-visible" type="submit">
+                    <button form="contact" class="button contact-form__mobile-button mobile-visible" type="submit">
                         Send Message
                     </button>
                 </div>
@@ -885,6 +886,14 @@
                 </div>
             </div>
         </footer>
+        <dialog class="modal" id="modalWindow">
+            <h3 class="modal__message">Thanks for your response</h3>
+            <form method="dialog" class="modal__form">
+                <button class="button modal__button" type="submit" onclick="document.body.style.overflow = ''">
+                    Close
+                </button>
+            </form>
+        </dialog>
     </main>
 </body>
 </html>

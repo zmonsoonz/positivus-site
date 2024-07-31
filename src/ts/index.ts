@@ -11,13 +11,6 @@ const sliderNext = document.getElementById("next-arrow") as HTMLButtonElement,
 
 let currentIndex: number = 0;
 
-// window.addEventListener('resize', () => {
-//     currentIndex = 0;
-//     moveSlider(0);
-//     sliderPrev.disabled = false;
-//     sliderNext.disabled = false;
-// });
-
 sliderNext.addEventListener('click', () => {
     currentIndex += 1;
     sliderPrev.disabled = false;
@@ -78,3 +71,46 @@ paginationButtons.forEach((item: HTMLButtonElement, i: number) => {
     })
 })
 
+
+//Modal
+const contactForm = document.querySelector('.contact-form') as HTMLFormElement;
+const footerForm = document.querySelector('.footer__form') as HTMLFormElement;
+const modal = document.getElementById('modalWindow') as HTMLDialogElement;
+
+contactForm.addEventListener('submit', (e) => submitForm(e, contactForm));
+footerForm.addEventListener('submit', (e) => submitForm(e, footerForm));
+
+function submitForm(e:SubmitEvent, form: HTMLFormElement) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const jsonData = JSON.stringify(formData);
+
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: jsonData
+    }).then((res) => {
+        modal.showModal();
+        document.body.style.overflow = 'hidden';
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.close();
+                document.body.style.overflow = '';
+            }
+        })
+    })
+}
+
+function openModal() {
+    modal.showModal();
+    document.body.style.overflow = 'hidden';
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.close();
+            document.body.style.overflow = '';
+        }
+    })
+}
