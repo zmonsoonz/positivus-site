@@ -92,17 +92,10 @@ function submitForm(e:SubmitEvent, form: HTMLFormElement) {
             'Content-Type': 'application/json'
         },
         body: jsonData
-    }).then((res) => {
-        modal.showModal();
-        document.body.style.overflow = 'hidden';
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                modal.close();
-                document.body.style.overflow = '';
-            }
-        })
     })
-}
+    .then(() => openModal())
+    .catch(() => {wrongModal(); openModal()})    
+    }
 
 function openModal() {
     modal.showModal();
@@ -113,4 +106,9 @@ function openModal() {
             document.body.style.overflow = '';
         }
     })
+}
+
+function wrongModal() {
+    const message = modal.firstElementChild as HTMLElement
+    message.textContent = "Something went wrong";
 }
